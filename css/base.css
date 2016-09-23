@@ -40,7 +40,7 @@ a {
   top: 5%;
   left: 5%;
   /*height: 100%;*/
-  background:url(../img/folder/top-bg.jpg) repeat-x;
+  background:url(../img/terminal/top-bg.jpg) repeat-x;
   background-color:#f2f1f0;
   color: #4C4C4C;
   font-size: 14px;
@@ -119,7 +119,7 @@ a {
 }
 
 .control .close{
-  background:url(../img/folder/close.jpg) no-repeat;
+  background:url(../img/terminal/close.jpg) no-repeat;
   height:19px;
   width:18px;
   float:left;
@@ -130,14 +130,14 @@ a {
 }
 
 .control .min{
-  background:url(../img/folder/minimise.jpg) no-repeat;
+  background:url(../img/terminal/minimise.jpg) no-repeat;
   height:19px;
   width:19px;
   float:left;
 }
 
 .control .max{
-  background:url(../img/folder/maximise.jpg) no-repeat;
+  background:url(../img/terminal/maximise.jpg) no-repeat;
   height:19px;
   width:17px;
   float:left;

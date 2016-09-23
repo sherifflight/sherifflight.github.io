@@ -1,16 +1,64 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		<div id="loader">
-			<noscript>
-				<p>
-					This project use JavaScript (JS). Your browser doesn't support JS or it is switched off.
-				</p>
-			</noscript>
-		</div>
+<html lang="en" dir="ltr">
+<head>
+    <title>Evgeniy Dyakonov Resume</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Evgeniy Dyakonov">
+    <link rel="stylesheet" href="/css/loader.css" inline/>
+    <link rel="stylesheet" href="/css/base.css" inline/>
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: {
+                families: ['Ubuntu:400,700:latin']
+            }
+        };
+        (function () {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+</head>
+<body>
+<div id="loader">
+    <div id="dot-container">
+        <noscript>
+            <p>
+                This demo uses JavaScript. Either your browser doesn't support
+                JavaScript, or it's currently switched off.
+            </p>
+        </noscript>
+    </div>
+</div>
+<div id="top" class="dropShadow">
+    <div id="top-left">
+        <div id="title"></div>
+    </div>
+    <div id="top-right">
 
-	</body>
+    </div>
+</div>
+<div id="terminal-window" class="terminal window selected-window">
+    <div class="control">
+        <div class="close"></div>
+        <div class="min"></div>
+        <div class="max"></div>
+        <div class="window-title">Терминал</div>
+    </div>
+    <div class="contents">
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.8.14/jquery-ui.min.js"></script>
+
+<script src="/js/scripts.js" inline></script>
+
+<link rel="stylesheet" href="/css/folder.css" inline/>
+</body>
 </html>

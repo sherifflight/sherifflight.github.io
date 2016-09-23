@@ -43,9 +43,9 @@ $(document).ready(function(){
 
 function setup(){
 	var imageObj = new Image();
-	$(imageObj).attr("src","../img/welcome/background-welcome.jpg").load(function(){
-	  	$('#loader').hide();
-	});
+	setTimeout( function() {
+		$('#loader').hide();
+	}, 1000);
 	setupSystemSettings();
 	setupGuidedTourSystem();
 	setupShotwellSystem();

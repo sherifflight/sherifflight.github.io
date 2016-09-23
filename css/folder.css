@@ -1,0 +1,11 @@
+.terminal .terminal-contents {
+    float: left;
+}
+
+.terminal .contents {
+    position: absolute;
+    background-color: #040102;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}

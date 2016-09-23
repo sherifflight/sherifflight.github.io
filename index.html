@@ -7,21 +7,6 @@
     <meta name="keywords" content="Evgeniy Dyakonov">
     <link rel="stylesheet" href="/css/loader.css" inline/>
     <link rel="stylesheet" href="/css/base.css" inline/>
-    <script type="text/javascript">
-        WebFontConfig = {
-            google: {
-                families: ['Ubuntu:400,700:latin']
-            }
-        };
-        (function () {
-            var wf = document.createElement('script');
-            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </script>
 </head>
 <body>
 <div id="loader">
@@ -39,7 +24,11 @@
         <div id="title"></div>
     </div>
     <div id="top-right">
-
+        <div id="battery"><img src="/img/top/battery-100-charging.svg" alt="">
+        </div>
+        <div id="volume"><img src="/img/top/speakers3.png" alt=""></div>
+        <div id="time"></div>
+        <div id="power"><img src="/img/top/power.png" alt=""></div>
     </div>
 </div>
 <div id="terminal-window" class="terminal window selected-window">
@@ -50,7 +39,11 @@
         <div class="window-title">Терминал</div>
     </div>
     <div class="contents">
-
+        <div class="terminal-content">
+            <div>evgeniy@evgeniy:~$</div>
+            <div>evgeniy@evgeniy:~$</div>
+            <div>evgeniy@evgeniy:~$<span class="terminal-cursor"></span></div>
+        </div>
     </div>
 </div>
 

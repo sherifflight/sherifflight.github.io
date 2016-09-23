@@ -43,59 +43,7 @@ function setupTopMenu() {
         }
     });
 
-    $('#top #top-right div ul li').bind('click', function () {
-        switch ($.trim($(this).text())) {
-            case _turn_off_bluetooth_:
-                systemSettings.setBluetooth(false);
-                $(this).text(_turn_on_bluetooth_);
-                break;
-            case _turn_on_bluetooth_:
-                systemSettings.setBluetooth(true);
-                $(this).text(_turn_off_bluetooth_);
-                break;
-            case _visible_:
-                if (systemSettings.bluetoothVisible()) {
-                    systemSettings.setBluetoothVisible(false);
-                    $(this).removeClass('ticked');
-                } else {
-                    systemSettings.setBluetoothVisible(true);
-                    $(this).addClass('ticked');
-                }
-                break;
-            case _mute_:
-                systemSettings.setMute(true);
-                sliderUpdate(0, 1);
-                $(this).text(_unmute_);
-                break;
-            case _unmute_:
-                systemSettings.setMute(false);
-                sliderUpdate(systemSettings.volume(), 0);
-                $(this).text(_mute_);
-                break;
-            case _shut_down_:
-                shutdownSystem.open();
-                break;
-            default:
-                errorMessage.open();
-                break;
-        }
-    });
 
-    $('#top #top-right #speakers .slider').slider({
-        min: 0,
-        max: 100,
-        step: 1,
-        value: 30,
-        slide: function (event, ui) {
-            currentPercent = $(this).slider('option', 'value');
-            _this.sliderUpdate(currentPercent);
-        },
-        stop: function (event, ui) {
-            currentPercent = $(this).slider('option', 'value');
-            _this.sliderUpdate(currentPercent);
-            _this.systemSettings.setVolume(currentPercent);
-        }
-    });
 
 
     $('#top #top-left #control-buttons div').bind('click', function () {
@@ -111,34 +59,6 @@ function setupTopMenu() {
         $('#top #top-right #speakers .banshee .banshee-play').css('background-image', 'url(../img/top/banshee-play.png)');
     });
 
-}
-
-function sliderUpdate($percent, $muted) {
-    var active = parseInt((195 * $percent) / 100);
-    if (active < 10) {
-        active = 0;
-    }
-    $('#top #top-right #speakers .drop-down .slider-active').css('width', active);
-    var imageIndex = 0;
-    if (systemSettings.mute()) {
-        imageIndex = 0;
-    } else if ($percent <= 1) {
-        imageIndex = 1;
-    } else if ($percent <= 35) {
-        imageIndex = 2;
-    } else if ($percent <= 75) {
-        imageIndex = 3;
-    } else if ($percent >= 75) {
-        imageIndex = 4;
-    }
-    if ($muted != undefined) {
-        if ($muted) {
-            $('#top #top-right #speakers .slider').slider({value: 0});
-        } else {
-            $('#top #top-right #speakers .slider').slider({value: systemSettings.volume()});
-        }
-    }
-    $('#top #top-right #speakers img.speakers-logo').attr('src', '../img/top/speakers' + imageIndex + '.png');
 }
 
 function closeTopRightDropDowns() {

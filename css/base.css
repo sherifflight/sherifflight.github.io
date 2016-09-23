@@ -74,6 +74,18 @@ a {
   font-size:15px;
 }
 
+#top #top-right #power {
+    padding: 2px 0px 0 5px;
+}
+
+#top #top-right #volume {
+    padding: 4px 5px 0 5px;
+}
+
+#top #top-right #battery {
+    padding: 4px 5px 0 5px;
+}
+
 #top #top-right div{
   float:left;
   padding:0px 8px;
@@ -102,6 +114,38 @@ a {
   width:90%;
   height: 90%;
   margin: 0 auto;
+}
+
+.terminal-content {
+    color: #38B317;
+}
+
+.terminal-cursor:after {
+    font-weight: bolder;
+    padding-left: 10px;
+    content: "|";
+    opacity: 0;
+    -webkit-animation: cursor 1s infinite;
+    -o-animation: cursor 1s infinite;
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .control{
